@@ -1,7 +1,13 @@
-FROM zabbix/zabbix-agent
+FROM ubuntu:bionic as builder
 
 MAINTAINER Roman Alekseev <romantix74@yandex.ru>
 
 RUN apt-get install -y conntrack
+
+FROM zabbix/zabbix-agent
+
+
+
+
 
 
